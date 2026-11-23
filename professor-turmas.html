@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NextEdu - Suas turmas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="professor.css">
+<script src="modoescuro.js" defer></script>
+<script src="idioma.js" defer></script>
+<script src="idioma-professor.js" defer></script>
+<script src="professor.js" defer></script>
+</head>
+<body class="prof-page has-bottom-nav">
+<main class="prof-shell">
+<header class="prof-header"><button class="prof-icon-btn" onclick="history.back()" aria-label="Voltar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke-width="2"><path d="M20 12H4M10.500 5.500 4 12l6.500 6.500"/></svg></button><h1>Suas turmas</h1><button class="prof-icon-btn right" onclick="professorAdd('item')" aria-label="Adicionar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke-width="2.600"><path d="M12 4v16M4 12h16"/></svg></button></header>
+<div class="prof-list"><a class="prof-list-card" href="professor-turma-detalhes.html"><div class="prof-tag">1°A</div><div class="prof-list-info"><strong>SEG - TER - QUI</strong><small>07:30 - 10:20 - 09:30</small></div><svg class="prof-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></a><a class="prof-list-card" href="professor-turma-detalhes.html"><div class="prof-tag">2°B</div><div class="prof-list-info"><strong>SEG - QUA - QUI</strong><small>10:20 - 08:40 - 07:00</small></div><svg class="prof-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></a><a class="prof-list-card" href="professor-turma-detalhes.html"><div class="prof-tag">3°C</div><div class="prof-list-info"><strong>TER - QUA - SEX</strong><small>11:30 - 09:30 - 10:20</small></div><svg class="prof-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></a><a class="prof-list-card" href="professor-turma-detalhes.html"><div class="prof-tag">7°B</div><div class="prof-list-info"><strong>SEG - QUI - SEX</strong><small>12:40 - 15:30 - 13:30</small></div><svg class="prof-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></a></div>
+</main>
+<nav class="bottom-nav"><a href="professor-home.html"><span class="nav-icon">⌂</span>Início</a>
+        <a class="active" href="professor-turmas.html"><span class="nav-icon">♧</span>Turmas</a>
+        <a href="professor-aulas.html"><span class="nav-icon">✎</span>Aulas</a>
+        <a href="professor-eventos.html"><span class="nav-icon">▦</span>Eventos</a>
+        <a href="professor-perfil.html"><span class="nav-icon">♙</span>Perfil</a></nav>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextEdu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="modoescuro.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="idioma.js" defer></script>
+</head>
+
+<body class="page-home">
+
+    <div class="home-app">
+        <header class="home-header">
+            <h1 class="home-logo">Nextedu</h1>
+        </header>
+
+        <main>
+            <section class="home-user-card">
+                <div class="home-avatar">
+                    <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm0 14c-2.03 0-3.8-.85-5.05-2.2.03-1.66 3.33-2.55 5.05-2.55 1.71 0 5.02.89 5.05 2.55C15.8 19.15 14.03 20 12 20z" />
+                    </svg>
+                </div>
+                <div class="home-user-info">
+                    <h2>Olá, Aluno!</h2>
+                    <p>Continue focada nos seus objetivos</p>
+                </div>
+            </section>
+
+            <div class="section-header">
+                <h3>Meu desempenho</h3>
+                <a class="home-link" href="notas.html">Ver detalhes</a>
+            </div>
+
+            <div class="home-stats">
+                <div class="home-stat-card">
+                    <div>
+                        <svg viewBox="0 0 24 24" width="48" height="48" stroke="#a855f7" stroke-width="2" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                            <polyline points="17 6 23 6 23 12"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="home-stat-title">Média atual</span>
+                        <span class="home-stat-value">8,5</span>
+                    </div>
+                </div>
+
+                <div class="home-stat-card">
+                    <div>
+                        <span class="home-stat-title">Projeção</span>
+                        <span class="home-stat-subtitle">Com base na sua evolução</span>
+                    </div>
+                    <div class="home-projection">
+                        <svg viewBox="0 0 24 24" width="36" height="36" stroke="#a855f7" stroke-width="2.5" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                        <span>9,2</span>
+                    </div>
+                </div>
+            </div>
+
+            <section class="home-chart-card">
+                <div class="home-chart-legend">
+                    <div class="home-legend-item">
+                        <span class="home-legend-line"></span>
+                        <span>Notas</span>
+                    </div>
+                    <div class="home-legend-item">
+                        <span class="home-legend-line dashed"></span>
+                        <span>Projeção</span>
+                    </div>
+                </div>
+
+                <div class="home-chart-wrapper">
+                    <canvas id="performanceChart"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <nav class="bottom-nav">
+        <a class="active" href="home.html"><span class="nav-icon">⌂</span>Início</a>
+        <a href="notas.html"><span class="nav-icon">▤</span>Notas</a>
+        <a href="estudo.html"><span class="nav-icon">✎</span>Estudo</a>
+        <a href="eventos.html"><span class="nav-icon">▦</span>Eventos</a>
+        <a href="perfil.html"><span class="nav-icon">♙</span>Perfil</a>
+    </nav>
+
+    <script>
+        const ctx = document.getElementById('performanceChart').getContext('2d');
+
+        const grafico = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['', '', '', '', '', ''],
+                datasets: [
+                    {
+                        label: 'Notas',
+                        data: [4.0, 5.0, 5.4, 6.0, 8.0, null],
+                        borderColor: '#a855f7',
+                        backgroundColor: '#a855f7',
+                        borderWidth: 3,
+                        pointRadius: [6, 6, 6, 6, 6, 0],
+                        pointBackgroundColor: '#a855f7',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 2,
+                        tension: 0.1,
+                        spanGaps: false
+                    },
+                    {
+                        label: 'Projeção',
+                        data: [null, null, null, null, 8.0, 9.8],
+                        borderColor: '#a855f7',
+                        borderDash: [8, 5],
+                        borderWidth: 3,
+                        pointRadius: 0,
+                        fill: false,
+                        tension: 0,
+                        spanGaps: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: {
+                        grid: { color: 'rgba(0, 0, 0, 0.08)' },
+                        ticks: { display: false }
+                    },
+                    y: {
+                        min: 0,
+                        max: 10,
+                        ticks: {
+                            stepSize: 2,
+                            color: document.body.classList.contains('dark') ? '#ffffff' : '#334155',
+                            font: { size: 16, weight: 'bold' },
+                            padding: 12
+                        },
+                        grid: { color: 'rgba(0, 0, 0, 0.08)' }
+                    }
+                }
+            }
+        });
+
+        const observadorTema = new MutationObserver(function () {
+            grafico.options.scales.y.ticks.color =
+                document.body.classList.contains('dark') ? '#ffffff' : '#334155';
+
+            grafico.update();
+        });
+
+        observadorTema.observe(document.body, {
+            attributes: true,
+            attributeFilter: ['class']
+        });
+
+    </script>
+
+</body>
+</html>

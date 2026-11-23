@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NextEdu - Detalhes da turma</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="professor.css">
+<script src="modoescuro.js" defer></script>
+<script src="idioma.js" defer></script>
+<script src="idioma-professor.js" defer></script>
+<script src="professor.js" defer></script>
+</head>
+<body class="prof-page has-bottom-nav">
+<main class="prof-shell">
+<header class="prof-header"><button class="prof-icon-btn" onclick="history.back()" aria-label="Voltar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke-width="2"><path d="M20 12H4M10.500 5.500 4 12l6.500 6.500"/></svg></button><h1>Detalhes da turma</h1><button class="prof-icon-btn right" onclick="professorAdd('item')" aria-label="Adicionar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke-width="2.600"><path d="M12 4v16M4 12h16"/></svg></button></header>
+<section class="prof-greeting"><div class="prof-avatar">2°B</div><div><h2 id="turmaSelecionada">2° Ano B - Ensino Médio</h2><p>Matéria - Professor(a)</p></div></section>
+<div class="prof-home-columns" style="margin-top:28px">
+<section class="prof-column"><h2>Alunos</h2><div class="prof-panel"><div class="prof-tile">Ana Silva</div><div class="prof-tile">Bruno Costa</div><div class="prof-tile">Camila Souza</div><div class="prof-tile">Daniel Lima</div></div></section>
+<section class="prof-column"><h2>Atalhos</h2><div class="prof-panel"><a class="prof-tile" href="professor-aulas.html">Horários da turma</a><a class="prof-tile" href="professor-planejamento.html">Planejamento de aula</a><a class="prof-tile" href="professor-aulas.html">Aulas ministradas</a></div></section>
+</div>
+</main>
+<nav class="bottom-nav"><a href="professor-home.html"><span class="nav-icon">⌂</span>Início</a>
+        <a class="active" href="professor-turmas.html"><span class="nav-icon">♧</span>Turmas</a>
+        <a href="professor-aulas.html"><span class="nav-icon">✎</span>Aulas</a>
+        <a href="professor-eventos.html"><span class="nav-icon">▦</span>Eventos</a>
+        <a href="professor-perfil.html"><span class="nav-icon">♙</span>Perfil</a></nav>
+</body>
+</html>

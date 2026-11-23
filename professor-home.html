@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NextEdu - Área do Professor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="professor.css">
+<script src="modoescuro.js" defer></script>
+<script src="idioma.js" defer></script>
+<script src="idioma-professor.js" defer></script>
+<script src="professor.js" defer></script>
+</head>
+<body class="prof-page has-bottom-nav">
+<main class="prof-shell">
+<header class="prof-header"><button class="prof-icon-btn menu" onclick="professorToggleMenu()" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><h1>NextEdu</h1><button class="prof-icon-btn right bell" onclick="professorNotificacoes()" aria-label="Notificações"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M18 9a6 6 0 1 0-12 0c0 6.5-2.5 8-2.5 8h17S18 15.500 18 9z"/><path d="M10.200 20.500a2 2 0 0 0 3.600 0"/><path d="M12 3V2"/></svg></button><div class="prof-side-menu"><a href="professor-home.html">Início</a><a href="professor-turmas.html">Suas turmas</a><a href="professor-aulas.html">Horários e aulas</a><a href="professor-eventos.html">Eventos</a><a href="professor-perfil.html">Perfil</a></div></header>
+<section class="prof-greeting"><div class="prof-avatar"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="23" r="12" fill="currentColor"/><path d="M8 64c0-14 10.500-22 24-22s24 8 24 22z" fill="currentColor"/></svg></div><div><h2>Olá, Professor(a)!</h2><p>Professor(a) - Matéria</p></div></section>
+<a class="prof-detail-link" href="professor-perfil.html">Ver detalhes</a>
+<div class="prof-home-columns">
+<section class="prof-column"><h2>Suas Turmas</h2><div class="prof-panel"><a class="prof-tile" href="professor-turmas.html">1° Ano A - EM</a><a class="prof-tile" href="professor-turmas.html">2° Ano B - EM</a><a class="prof-tile" href="professor-turmas.html">3° Ano C - EM</a><a class="prof-tile" href="professor-turmas.html">7° Ano D - EF II</a></div></section>
+<section class="prof-column"><h2>Seus Horários</h2><div class="prof-panel"><a class="prof-tile" href="professor-aulas.html">Segunda-feira</a><a class="prof-tile" href="professor-aulas.html">Terça-feira</a><a class="prof-tile" href="professor-aulas.html">Quarta-feira</a><a class="prof-tile" href="professor-aulas.html">Quinta-feira</a><a class="prof-tile" href="professor-aulas.html">Sexta-feira</a></div></section>
+</div>
+</main>
+<nav class="bottom-nav"><a class="active" href="professor-home.html"><span class="nav-icon">⌂</span>Início</a>
+        <a href="professor-turmas.html"><span class="nav-icon">♧</span>Turmas</a>
+        <a href="professor-aulas.html"><span class="nav-icon">✎</span>Aulas</a>
+        <a href="professor-eventos.html"><span class="nav-icon">▦</span>Eventos</a>
+        <a href="professor-perfil.html"><span class="nav-icon">♙</span>Perfil</a></nav>
+</body>
+</html>

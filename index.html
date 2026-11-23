@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextEdu - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="modoescuro.js" defer></script>
+    <script src="idioma.js" defer></script>
+</head>
+
+<body class="page-login">
+
+    <main class="login-container">
+        <img class="login-logo" src="logo-nextedu.png" data-light-src="logo-nextedu.png" data-dark-src="logo-nextedu2.png" alt="Logo da escola">
+
+        <h1 class="login-title">Seu desenvolvimento escolar em um só lugar</h1>
+
+        <div class="login-roles">
+            <input type="radio" name="tipo" id="aluno">
+            <label for="aluno">Aluno</label>
+
+            <input type="radio" name="tipo" id="professor">
+            <label for="professor">Professor</label>
+        </div>
+
+        <form class="login-form" onsubmit="return false;">
+            <div class="login-field">
+                <input type="text" id="nome" name="nome" placeholder="Usuário" required>
+            </div>
+
+            <div class="login-field">
+                <input type="password" id="senha" name="senha" placeholder="Senha" required>
+            </div>
+
+            <button type="submit" onclick="window.location.href=document.getElementById('professor').checked?'professor-home.html':'home.html'">Entrar</button>
+        </form>
+
+        <nav class="login-links">
+            <a href="login.html">Criar conta</a>
+            <a href="login.html">Esqueci minha senha</a>
+        </nav>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextEdu - Estudo em Casa</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="modoescuro.js" defer></script>
+    <script src="idioma.js" defer></script>
+</head>
+<body class="page-estudo">
+
+<div class="estudo-container">
+    <header class="estudo-topbar">
+        <a class="estudo-back seta-voltar" href="home.html" aria-label="Voltar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4M10.5 5.5 4 12l6.5 6.5"/></svg></a>
+        <div class="estudo-logo">Estudo em Casa</div>
+        <a class="estudo-menu-btn" href="#adicionar">＋</a>
+    </header>
+
+    <div class="estudo-tabs">
+        <a class="estudo-tab active" href="#meu-plano">Meu Plano</a>
+        <a class="estudo-tab" href="conteudos.html">Conteúdos</a>
+    </div>
+
+    <section id="meu-plano">
+        <div class="estudo-section-head">
+            <h2>Meu Cronograma</h2>
+            <span class="estudo-details">Hoje - 28/08</span>
+        </div>
+
+        <article class="estudo-task">
+            <div class="estudo-task-icon">∑</div>
+            <div contenteditable="true" title="Clique para editar">
+                <h3>Matemática</h3>
+                <p>14:00 - 15:00</p>
+                <p>Revisão de equações do 2º grau</p>
+            </div>
+            <label title="Marcar como concluído">
+                <input class="estudo-check" type="checkbox">
+            </label>
+        </article>
+
+        <article class="estudo-task">
+            <div class="estudo-task-icon">▤</div>
+            <div contenteditable="true" title="Clique para editar">
+                <h3>Português</h3>
+                <p>15:00 - 16:00</p>
+                <p>Leitura e resumo - Machado de Assis</p>
+            </div>
+            <label title="Marcar como concluído">
+                <input class="estudo-check" type="checkbox">
+            </label>
+        </article>
+
+        <article class="estudo-task">
+            <div class="estudo-task-icon">⚗</div>
+            <div contenteditable="true" title="Clique para editar">
+                <h3>Ciências</h3>
+                <p>16:00 - 17:00</p>
+                <p>Estudo sobre o sistema solar</p>
+            </div>
+            <label title="Marcar como concluído">
+                <input class="estudo-check" type="checkbox">
+            </label>
+        </article>
+    </section>
+
+    <a class="estudo-primary-btn" href="#adicionar">Adicionar matéria</a>
+</div>
+
+<nav class="bottom-nav">
+    <a href="home.html"><span class="nav-icon">⌂</span>Início</a>
+    <a href="notas.html"><span class="nav-icon">▤</span>Notas</a>
+    <a class="active" href="estudo.html"><span class="nav-icon">✎</span>Estudo</a>
+    <a href="eventos.html"><span class="nav-icon">▦</span>Eventos</a>
+    <a href="perfil.html"><span class="nav-icon">♙</span>Perfil</a>
+</nav>
+
+</body>
+</html>

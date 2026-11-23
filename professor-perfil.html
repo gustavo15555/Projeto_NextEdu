@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NextEdu - Perfil</title>
+
+    <script src="modoescuro.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="professor.css">
+    <script src="idioma.js" defer></script>
+    <script src="idioma-professor.js" defer></script>
+    <script src="professor.js" defer></script>
+</head>
+<body class="page-perfil has-bottom-nav">
+
+    <!-- CABEÇALHO -->
+
+    <header class="perfil-header">
+
+        <!-- Voltar para a página inicial -->
+        <a href="professor-home.html" class="perfil-voltar seta-voltar" aria-label="Voltar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4M10.5 5.5 4 12l6.5 6.5"/></svg>
+        </a>
+
+        <h1>Perfil</h1>
+
+        <span class="perfil-notificacao" onclick="professorNotificacoes()" role="button" aria-label="Notificações"><svg style="width:42px;height:42px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M18 9a6 6 0 1 0-12 0c0 6.5-2.5 8-2.5 8h17S18 15.500 18 9z"/><path d="M10.200 20.500a2 2 0 0 0 3.600 0"/><path d="M12 3V2"/></svg></span>
+</header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <main class="perfil-container">
+
+
+        <!-- INFORMAÇÕES DO ALUNO -->
+
+        <section class="perfil-aluno-card">
+
+            <div class="perfil-avatar">
+
+                <div class="perfil-avatar-cabeca"></div>
+
+                <div class="perfil-avatar-corpo"></div>
+
+            </div>
+
+            <div class="perfil-aluno-info">
+
+                <h2>Nome do Professor</h2>
+
+                <p>Professor(a) - Matéria</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- MENU DO PERFIL -->
+
+        <section class="perfil-menu">
+
+
+            <!-- MINHA CONTA -->
+
+            <a href="minhaconta.html" class="perfil-menu-item">
+
+                <div class="perfil-icone">
+
+                    <svg viewBox="0 0 50 50">
+
+                        <circle
+                            cx="25"
+                            cy="15"
+                            r="9">
+                        </circle>
+
+                        <path d="
+                            M10 43
+                            C10 32 17 26 25 26
+                            C33 26 40 32 40 43
+                        ">
+                        </path>
+
+                    </svg>
+
+                </div>
+
+                <div class="perfil-menu-texto">
+                    Minha Conta
+                </div>
+
+                <div class="perfil-seta">
+                    ›
+                </div>
+
+            </a>
+
+
+            <!-- CONFIGURAÇÕES -->
+
+            <a href="configuracoes.html" class="perfil-menu-item">
+
+                <div class="perfil-icone">
+
+                    <svg viewBox="0 0 50 50">
+
+                        <circle
+                            cx="25"
+                            cy="25"
+                            r="9">
+                        </circle>
+
+                        <path d="
+                            M25 5
+                            L28 9
+                            L33 10
+                            L37 7
+                            L43 13
+                            L40 17
+                            L41 22
+                            L45 25
+                            L41 28
+                            L40 33
+                            L43 37
+                            L37 43
+                            L33 40
+                            L28 41
+                            L25 45
+                            L22 41
+                            L17 40
+                            L13 43
+                            L7 37
+                            L10 33
+                            L9 28
+                            L5 25
+                            L9 22
+                            L10 17
+                            L7 13
+                            L13 7
+                            L17 10
+                            L22 9
+                            Z
+                        ">
+                        </path>
+
+                    </svg>
+
+                </div>
+
+                <div class="perfil-menu-texto">
+                    Configurações
+                </div>
+
+                <div class="perfil-seta">
+                    ›
+                </div>
+
+            </a>
+
+
+            <!-- AJUDA -->
+
+            <a href="ajuda.html" class="perfil-menu-item">
+
+                <div class="perfil-icone">
+
+                    <svg viewBox="0 0 50 50">
+
+                        <circle
+                            cx="25"
+                            cy="25"
+                            r="17">
+                        </circle>
+
+                        <text
+                            x="25"
+                            y="33"
+                            text-anchor="middle"
+                            font-size="25"
+                            fill="#808080"
+                            stroke="none">
+                            ?
+                        </text>
+
+                    </svg>
+
+                </div>
+
+                <div class="perfil-menu-texto">
+                    Ajuda
+                </div>
+
+                <div class="perfil-seta">
+                    ›
+                </div>
+
+            </a>
+
+
+            <!-- SAIR -->
+
+            <a href="login.html" class="perfil-menu-item">
+
+                <div class="perfil-icone">
+
+                    <svg viewBox="0 0 50 50">
+
+                        <!-- Porta -->
+
+                        <path d="
+                            M28 8
+                            H12
+                            V42
+                            H28
+                        ">
+                        </path>
+
+                        <!-- Linha da seta -->
+
+                        <path d="
+                            M23 25
+                            H44
+                        ">
+                        </path>
+
+                        <!-- Ponta da seta -->
+
+                        <path d="
+                            M36 17
+                            L44 25
+                            L36 33
+                        ">
+                        </path>
+
+                    </svg>
+
+                </div>
+
+                <div class="perfil-menu-texto">
+                    Sair
+                </div>
+
+                <div class="perfil-seta">
+                    ›
+                </div>
+
+            </a>
+
+        </section>
+
+
+        </main>
+
+
+<nav class="bottom-nav"><a href="professor-home.html"><span class="nav-icon">⌂</span>Início</a>
+        <a href="professor-turmas.html"><span class="nav-icon">♧</span>Turmas</a>
+        <a href="professor-aulas.html"><span class="nav-icon">✎</span>Aulas</a>
+        <a href="professor-eventos.html"><span class="nav-icon">▦</span>Eventos</a>
+        <a class="active" href="professor-perfil.html"><span class="nav-icon">♙</span>Perfil</a></nav>
+</body>
+
+</html>

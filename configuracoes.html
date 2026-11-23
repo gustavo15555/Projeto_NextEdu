@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - NextEdu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="modoescuro.js" defer></script>
+    <script src="configuracoes.js" defer></script>
+    <script src="idioma.js" defer></script>
+    <script src="voltar.js" defer></script>
+</head>
+<body>
+
+    <a href="perfil.html" class="conta-voltar seta-voltar voltar-flutuante js-voltar" aria-label="Voltar para perfil">
+        <svg viewBox="0 0 24 24">
+            <path d="M20 12H4M10.5 5.5 4 12l6.5 6.5"/>
+        </svg>
+    </a>
+
+    <main class="config-page">
+
+        <header class="config-header">
+            <div>
+                <h1 id="titulo-config">Configurações</h1>
+                <p id="subtitulo-config">Personalize sua experiência no NextEdu.</p>
+            </div>
+        </header>
+
+        <section class="config-section">
+            <h2 id="titulo-aparencia">Aparência</h2>
+
+            <div class="config-card">
+                <div class="config-info">
+                    <div class="config-icon">🌙</div>
+                    <div>
+                        <h3 id="titulo-tema">Modo escuro</h3>
+                        <p id="descricao-tema">Altere entre o tema claro e escuro.</p>
+                    </div>
+                </div>
+
+                <button id="btn-tema" class="config-button">
+                    🌙 Modo Escuro
+                </button>
+            </div>
+        </section>
+
+        <section class="config-section">
+            <h2 id="titulo-notificacoes">Notificações</h2>
+
+            <div class="config-card">
+                <div class="config-info">
+                    <div class="config-icon">🔔</div>
+                    <div>
+                        <h3 id="titulo-aviso">Receber notificações</h3>
+                        <p id="descricao-aviso">Ative ou desative os avisos do NextEdu.</p>
+                    </div>
+                </div>
+
+                <label class="config-switch">
+                    <input type="checkbox" id="notificacoes">
+                    <span class="config-slider"></span>
+                </label>
+            </div>
+
+            <p class="config-status" id="status-notificacoes">
+                Notificações ativadas
+            </p>
+        </section>
+
+        <section class="config-section">
+            <h2 id="titulo-idioma">Idioma</h2>
+
+            <div class="config-card">
+                <div class="config-info">
+                    <div class="config-icon">🌎</div>
+                    <div>
+                        <h3 id="titulo-lingua">Idioma do aplicativo</h3>
+                        <p id="descricao-lingua">Escolha o idioma de sua preferência.</p>
+                    </div>
+                </div>
+
+                <select id="idioma" class="config-select">
+                    <option value="pt">Português</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="config-section">
+            <h2 id="titulo-conta">Conta</h2>
+
+            <div class="config-card">
+                <div class="config-info">
+                    <div class="config-icon">👤</div>
+                    <div>
+                        <h3 id="titulo-privacidade">Privacidade</h3>
+                        <p id="descricao-privacidade">Suas preferências ficam salvas neste dispositivo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

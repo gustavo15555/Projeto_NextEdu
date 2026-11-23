@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Conta - NextEdu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="modoescuro.js" defer></script>
+    <script src="idioma.js" defer></script>
+    <script src="voltar.js" defer></script>
+</head>
+<body class="page-minha-conta">
+    
+    <header class="conta-header">
+        
+        <a href="perfil.html" class="conta-voltar seta-voltar js-voltar" aria-label="Voltar para perfil">
+            <svg viewBox="0 0 24 24">
+                <path d="M20 12H4M10.5 5.5 4 12l6.5 6.5"/>
+            </svg>
+        </a>
+        <h1>Minha conta</h1>
+    </header>
+
+    <main class="conta-container">
+        <div class="conta-card-wrapper">
+            
+            
+            <section class="info-pessoais-card">
+                <h2>Informações pessoais</h2>
+                
+                <form class="info-form" onsubmit="return false;">
+                    <div class="info-field">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome">
+                        <button type="button" class="btn-editar" onclick="editarCampo('nome')" aria-label="Editar Nome">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+
+                    <div class="info-field">
+                        <label for="turma">Turma:</label>
+                        <input type="text" id="turma" placeholder="Digite sua turma">
+                        <button type="button" class="btn-editar" onclick="editarCampo('turma')" aria-label="Editar Turma">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+
+                    <div class="info-field">
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" placeholder="000.000.000-00">
+                        <button type="button" class="btn-editar" onclick="editarCampo('cpf')" aria-label="Editar CPF">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+
+                    <div class="info-field">
+                        <label for="nascimento">Data de nascimento:</label>
+                        <input type="text" id="nascimento" placeholder="DD/MM/AAAA">
+                        <button type="button" class="btn-editar" onclick="editarCampo('nascimento')" aria-label="Editar Data de nascimento">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+
+                    <div class="info-field">
+                        <label for="email">E-mail principal:</label>
+                        <input type="email" id="email" placeholder="seuemail@exemplo.com">
+                        <button type="button" class="btn-editar" onclick="editarCampo('email')" aria-label="Editar E-mail principal">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+
+                    <div class="info-field">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+                        <button type="button" class="btn-editar" onclick="editarCampo('telefone')" aria-label="Editar Telefone">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+
+                    <div class="info-field">
+                        <label for="linkedin">Linkedin:</label>
+                        <input type="text" id="linkedin" placeholder="linkedin.com/in/seu-perfil">
+                        <button type="button" class="btn-editar" onclick="editarCampo('linkedin')" aria-label="Editar Linkedin">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+
+            <section class="avatar-card">
+                <div class="avatar-circle">
+                    <svg viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="46" fill="none" stroke="var(--roxo-login)" stroke-width="4"/>
+                        <circle cx="50" cy="38" r="18" fill="var(--roxo-login)"/>
+                        <path d="M 22 80 A 30 30 0 0 1 78 80 Z" fill="var(--roxo-login)"/>
+                    </svg>
+                </div>
+
+
+                <button type="button" class="btn-alterar-foto">Alterar foto</button>
+
+
+                <div class="info-field exibicao-field">
+                    <label for="nome-exibicao">Nome de exibição:</label>
+                    <input type="text" id="nome-exibicao" placeholder="Seu nome de exibição">
+                    <button type="button" class="btn-editar" onclick="editarCampo('nome-exibicao')" aria-label="Editar Nome de exibição">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                        </svg>
+                    </button>
+                </div>
+
+
+                <hr class="divider-line">
+
+
+                <a href="login.html" class="btn-sair">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                        <polyline points="16 17 21 12 16 7"></polyline>
+                        <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
+                    <span>Sair do perfil</span>
+                </a>
+            </section>
+
+
+        </div>
+    </main>
+
+    <script>
+        function editarCampo(idCampo) {
+            const campo = document.getElementById(idCampo);
+            if (campo) {
+                campo.focus();
+                const valorAtual = campo.value;
+                campo.value = '';
+                campo.value = valorAtual;
+            }
+        }
+    </script>
+</body>
+</html>
